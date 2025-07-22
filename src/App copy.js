@@ -253,7 +253,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
   useEffect(() => {
     const getData = async () => {
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+        `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
       );
       setIsLoading(true);
       const data = await res.json();
