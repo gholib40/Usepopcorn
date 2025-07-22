@@ -80,7 +80,7 @@ export default function App() {
     const fetchMovies = async () => {
       try {
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+          `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
           { signal: controller.signal }
         );
         setIsLoading(true);
@@ -322,7 +322,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
   useEffect(() => {
     const getData = async () => {
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+        `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
       );
       setIsLoading(true);
       const data = await res.json();
